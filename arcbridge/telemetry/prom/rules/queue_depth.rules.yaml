@@ -1,0 +1,13 @@
+groups:
+  - name: controlplane
+    rules:
+      - record: arcbridge:queue:depth
+        expr: sum(rate(arcbridge_queue_length[5m]))
+      - alert: ArcBridgeControlPlaneBacklogHigh
+        expr: arcbridge:queue:depth > 100
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "ArcBridge control plane backlog high"
+          description: "Investigate rate limits and Redis health"
