@@ -1,0 +1,23 @@
+{
+  "title": "ArcBridge Fleet Overview (POC)",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Registration Rate",
+      "targets": [
+        {
+          "expr": "rate(arcbridge_register_requests_total[5m])"
+        }
+      ]
+    },
+    {
+      "type": "graph",
+      "title": "Extension Errors",
+      "targets": [
+        {
+          "expr": "sum(rate(arcbridge_extension_errors_total[5m]))"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: arcbridge-bootstrap-token
+  namespace: arcbridge-system
+type: Opaque
+data:
+  token: cG9jLXRva2Vu

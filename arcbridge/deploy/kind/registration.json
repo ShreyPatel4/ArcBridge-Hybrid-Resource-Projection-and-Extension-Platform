@@ -1,0 +1,5 @@
+{
+  "clusterID": "cluster-poc",
+  "certPath": "./certs/cluster.pem",
+  "keyPath": "./certs/cluster-key.pem"
+}
